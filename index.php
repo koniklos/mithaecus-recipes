@@ -21,12 +21,12 @@ if( !defined('WPINC')) {
 include_once( 'includes/post-type/recipe-post-type.php' );
 include_once( 'includes/taxonomies/meal-type-tax.php' );
 include_once( 'includes/taxonomies/course-type-tax.php' );
-include_once( 'includes/taxonomies/ingredients-tax.php' );
 include_once( 'includes/taxonomies/difficulty-levels-tax.php' );
 include_once( 'includes/taxonomies/seasonal-tax.php' );
 include_once( 'includes/metaboxes/preparation-time-metabox.php' );
 include_once( 'includes/metaboxes/additional-info-metabox.php' );
 include_once( 'includes/metaboxes/instructions-metabox.php' );
+include_once( 'includes/metaboxes/ingredients-metabox.php' );
 include_once( 'includes/metaboxes/serves-metabox.php' );
 include_once( 'includes/enqueue-assets.php' );
 

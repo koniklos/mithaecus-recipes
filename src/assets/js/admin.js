@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
   $("._themename_repeat_add").on("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     let addMoreBtn = $(e.currentTarget);
     let lastRow = addMoreBtn
       .parent()

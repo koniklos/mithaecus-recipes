@@ -108,13 +108,8 @@ export const styles = done => {
 };
 
 // Compile JS
-export const scripts = done => {
-  if (paths.scripts.src === "") {
-    console.log("No scripts found! Continuing...");
-    done();
-    return;
-  }
-  gulp
+export const scripts = () => {
+  return gulp
     .src(paths.scripts.src)
     .pipe(named())
     .pipe(
@@ -141,7 +136,6 @@ export const scripts = done => {
       })
     )
     .pipe(gulp.dest(paths.scripts.dest));
-  done();
 };
 
 // Minify images
@@ -181,7 +175,7 @@ export const dev = gulp.series(
 
 export const build = gulp.series(
   clean,
-  gulp.parallel(styles, images, scripts, copy)
+  gulp.parallel(styles, scripts, images, copy)
 );
 
 export const bundle = gulp.series(build, compress);
